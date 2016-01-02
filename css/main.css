@@ -6,3 +6,7 @@
 .bash:before{
   content: '$ ';
 }
+
+.bash{
+    display: block;
+}

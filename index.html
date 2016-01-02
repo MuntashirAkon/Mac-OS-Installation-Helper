@@ -62,11 +62,9 @@
 									<ol>
 										<li>Download the <code>usb_helper.sh</code>. Let's imagine you downloaded the file in the <code>~/Downloads</code> directory.</li>
 										<li>Insert the USB pendrive.</li>
-										<li>Open <code>Terminal.app</code> located at <code>/Applications/Utilities</code> &amp; run these commands:
+										<li>Open <code>Terminal.app</code> located at <code>/Applications/Utilities</code> &amp; run this command:
 											<code style="display: block;">
-												<code class="bash">cd ~/Downloads</code><br />
-												<code class="bash">chmod 755 usb_helper.sh</code><br />
-												<code class="bash">./usb_helper.sh</code><br />
+												<code class="bash">chmod 755 ~/Downloads/usb_helper.sh && mkdir ~/Downloads/helper && mv ~/Downloads/usb_helper.sh ~/Downloads/helper && cd ~/Downloads/helper/ && bash usb_helper.sh</code>
 											</code>
 										</li>
 										<li>If everything works fine, you will have a bootable USB.</li>
