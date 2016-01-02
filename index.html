@@ -4,7 +4,7 @@
 	<title>El Capitan Installation Helper</title>
 	<meta charset="utf-8" />
 	<meta name="Author" content="Muntashir Akon" />
-	<base href="/Mac-OS-Installation-Helper/">
+	<!--base href="/Mac-OS-Installation-Helper/"-->
 	<meta name="Description" content="" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -172,17 +172,29 @@
 							</article>
             </div>
             <div class="col-md-6">
-                <h3>Essential Files to download</h3>
-				<small class="text-danger">Notice: You do not have to download anything by yourself if you download the <code>_helper.sh</code> files.</small>
-                <ul>
-                    <li><a href="http://sourceforge.net/projects/cloverefiboot/files/latest/download" target="_blank">Clover Installer</a></li>
-                    <li><a href="https://github.com/JrCs/CloverGrowerPro/raw/master/Files/HFSPlus/X64/HFSPlus.efi">HFSPlus.efi</a></li>
-                    <li><a href="https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads" target="_blank">FakeSMC.kext</a></li>
-                    <li><a href="https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads" target="_blank">VoodooPS2Controller.kext</a></li>
-                    <li><a href="https://bitbucket.org/RehabMan/os-x-generic-usb3/downloads" target="_blank">GenericUSBXHCI.kext</a></li>
-                    <li><a href="http://www.tonymacx86.com/attachments/laptop-compatibility/64939d1377055524-hp-envy-dv6-7202se-compatible-hpraidinjector.kext.zip" target="_blank">HPRAIDInjector.kext</a></li>
-                    <li><a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank">FakePCIID.kext &amp; FakePCIID_Intel_HD_Graphics.kext</a></li>
-                </ul>
+                <h3 class="header" onclick="$('#ess').toggle();">Essential Files to download</h3>
+				<article id="ess" style="display: none;">
+					<small class="text-danger">Notice: You do not have to download anything by yourself if you download the <code>_helper.sh</code> files.</small>
+					<ul>
+						<li><a href="http://sourceforge.net/projects/cloverefiboot/files/latest/download" target="_blank">Clover Installer</a></li>
+						<li><a href="https://github.com/JrCs/CloverGrowerPro/raw/master/Files/HFSPlus/X64/HFSPlus.efi">HFSPlus.efi</a></li>
+						<li><a href="https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads" target="_blank">FakeSMC.kext</a></li>
+						<li><a href="https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads" target="_blank">VoodooPS2Controller.kext</a></li>
+						<li><a href="https://bitbucket.org/RehabMan/os-x-generic-usb3/downloads" target="_blank">GenericUSBXHCI.kext</a></li>
+						<li><a href="http://www.tonymacx86.com/attachments/laptop-compatibility/64939d1377055524-hp-envy-dv6-7202se-compatible-hpraidinjector.kext.zip" target="_blank">HPRAIDInjector.kext</a></li>
+						<li><a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank">FakePCIID.kext &amp; FakePCIID_Intel_HD_Graphics.kext</a></li>
+					</ul>
+				</article>
+                <h3 class="header" onclick="$('#comm').toggle();">Common Tools</h3>
+                <article id="comm" style="">
+                    <small>Open <code>Terminal.app</code> and run (let's imagine you downloaded the <code>sth.sh</code>
+                        (replace the file name with the once that you have downloaded) file in the <code>~/Downloads</code>):
+                        <code class="bash">cd ~/Downloads && chmod 755 sth.sh && bash sth.sh</code></small>
+                    <ul>
+                        <li><a href="" data-toggle="tooltip" data-placement="bottom"
+                               title="Only use this when you didn't apply any DSDT patch in /EFI/CLOVER/ACPI/patched.">DSDT Extractor (Mac)</a></li>
+                    </ul>
+                </article>
             </div>
         </div>
 		<div class="row">
