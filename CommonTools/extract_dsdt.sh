@@ -5,20 +5,6 @@ echo "By Muntashir Al-Islam"
 echo "---------------------"
 
 # check if already E/C/A/patched has DSDT.aml
-# mount EFI
-if [ -d /Volumes/EFI/ ]; then
-    diskutil unmount EFI
-fi
-
-mkdir /Volumes/EFI
-diskutil mount -mountPoint /Volumes/EFI disk0s1
-dsdt=$(ls /Volumes/EFI/EFI/CLOVER/ACPI/patched/*.aml | grep DSDT)
-diskutil unmount EFI
-if [ dsdt != "" ]; then
-    echo -e "DSDT already exist in the EFI/CLOVER/ACPI/patched.\nThis method will not work.\nExiting..."
-    exit
-fi
-
 cd ~/Downloads/
 
 echo "Extractor will download essential files."
