@@ -149,21 +149,49 @@
 									<label for="ethernet">Choose your Ethernet</label>
 									<select id="ethernet" name="ethernet">
 										<option value="" selected disabled>Select One</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8100</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8101E</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8102E</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8103E</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8105E</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8106E</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8106EUS</option>
-										<option value="RealtekRTL8111">Realtek RTL8111</option>
-										<option value="RealtekRTL8111">Realtek RTL8168</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8401E</option>
-                                        <option value="RealtekRTL8100">Realtek RTL8402</option>
-										<option value="AppleIntelE1000e">AppleIntel E1000e</option>
-                                        <option value="0">None of above</option>
+										<optgroup label="Realtek">
+	                    <option value="RealtekRTL8100">RTL8100</option>
+	                    <option value="RealtekRTL8100">RTL8101E</option>
+	                    <option value="RealtekRTL8100">RTL8102E</option>
+	                    <option value="RealtekRTL8100">RTL8103E</option>
+	                    <option value="RealtekRTL8100">RTL8105E</option>
+	                    <option value="RealtekRTL8100">RTL8106E</option>
+	                    <option value="RealtekRTL8100">RTL8106EUS</option>
+											<option value="RealtekRTL8111">RTL8111</option>
+											<option value="RealtekRTL8111">RTL8168</option>
+	                    <option value="RealtekRTL8100">RTL8401E</option>
+	                    <option value="RealtekRTL8100">RTL8402</option>
+										</optgroup>
+										<optgroup label="Intel">
+											<option value="IntelMausiEthernet">82578LM</option>
+											<option value="IntelMausiEthernet">82578LC</option>
+											<option value="IntelMausiEthernet">82578DM</option>
+											<option value="IntelMausiEthernet">82578DC</option>
+											<option value="IntelMausiEthernet">82579LM</option>
+											<option value="IntelMausiEthernet">82579V</option>
+											<option value="IntelMausiEthernet">I217LM</option>
+											<option value="IntelMausiEthernet">I217V</option>
+											<option value="IntelMausiEthernet">I218LM</option>
+											<option value="IntelMausiEthernet">I218V</option>
+											<option value="IntelMausiEthernet">I218LM2</option>
+											<option value="IntelMausiEthernet">I218V2</option>
+											<option value="IntelMausiEthernet">I218LM3</option>
+										</optgroup>
+										<optgroup label="Atheros">
+											<option value="AtherosE2200Ethernet">AR816x</option>
+											<option value="AtherosE2200Ethernet">AR817x</option>
+											<option value="AtherosE2200Ethernet">Killer E220x</option>
+											<option value="AtherosE2200Ethernet">Killer 2400</option>
+										</optgroup>
+										<optgroup label="Broadcom">
+											<option value="BroadcomBCM57xx">BCM57xx</option>
+										</optgroup>
+										<optgroup label="Others">
+											<option value="AppleIntelE1000e">AppleIntel E1000e</option>
+										</optgroup>
+                    <option value="0">None of above</option>
 									</select><br />
-									<small class="text-danger">One kext may work for multiple ethernet. Google your ethernet for more information.</small>
+									<small class="text-danger">One kext may work for multiple ethernet. Find your ethernet via Device ID (DEV) and Vendor ID (VEN).</small>
 									<input type="submit" id="submit_form" name="submit_form" value="Download usb_helper.sh" />
 								</form>
 							</article>
