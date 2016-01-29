@@ -26,3 +26,4 @@ if [ $confirm = "y" ]; then
 fi
 echo "Done."
 echo "If you have already created the config.plist for your Hackintosh, you can now restart."
+exit 0
