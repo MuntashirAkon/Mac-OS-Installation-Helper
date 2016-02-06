@@ -3,7 +3,7 @@
 echo "en0 Configuration Helper"
 echo "------------------------"
 echo -n "Do you have a working Ethernet/Wifi? (y/n): "
-input confirm
+read confirm
 if [ $confirm = "y" ]; then
   # delete network interfaces
   cd /Library/Preferences/SystemConfiguration/
@@ -14,7 +14,7 @@ else
   exit
 fi
 echo "Done. Restart? (y/n): "
-input confirm
+read confirm
 if [ $confirm = "y" ]; then
   sudo shutdown -r now "Restarting..."
 fi
