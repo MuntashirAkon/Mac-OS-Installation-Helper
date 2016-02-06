@@ -3,7 +3,7 @@
 echo "iMessage Configuration Helper"
 echo "-----------------------------"
 echo -n "Are you sure to run this script? (y/n): "
-input confirm
+read confirm
 if ! [ $confirm = "y" ]; then exit; fi
 # delete some files
 cd ~/Library/Caches/
@@ -17,7 +17,7 @@ rm -R com.apple.imservice*
 rm -R ~/Library/Messages/
 
 echo -n "Do you want to clean network preferences, too? (y/n): "
-input confirm
+read confirm
 if [ $confirm = "y" ]; then
   # delete network interfaces
   cd /Library/Preferences/SystemConfiguration/
