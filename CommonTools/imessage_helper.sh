@@ -7,14 +7,25 @@ read confirm
 if ! [ $confirm = "y" ]; then exit; fi
 # delete some files
 cd ~/Library/Caches/
+rm -R com.apple.iCloudHelper*
 rm -R com.apple.Messages*
 rm -R com.apple.imfoundation*
+
 cd ~/Library/Preferences/
 rm -R com.apple.iChat*
+rm -R com.apple.icloud*
 rm -R com.apple.imagent*
 rm -R com.apple.imessage*
 rm -R com.apple.imservice*
+rm -R com.apple.ids.service*
+rm com.apple.madrid.plist
+# as of August, 2014
+rm -R com.apple.identityserviced*
+rm -R com.apple.ids.service*
+rm -R com.apple.security.*
+
 rm -R ~/Library/Messages/
+
 
 echo -n "Do you want to clean network preferences, too? (y/n): "
 read confirm
